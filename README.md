@@ -1,6 +1,6 @@
 # generator-tfc
 
-> [Yeoman](http://yeoman.io) generator
+> [Yeoman](http://yeoman.io) generator for Toolkit for CreateJS with tfcsprite and balmung
 
 ## Getting Started
 
