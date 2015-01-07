@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-if": "*",
+    "gulp-tfcsprite": "*",
+    "gulp-balmung": "*",
+    "run-sequence": "*",
+    "del": "*"
+  }
+}
