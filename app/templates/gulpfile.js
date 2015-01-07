@@ -6,6 +6,7 @@ var balmung = require("gulp-balmung");
 var tfcsprite = require("gulp-tfcsprite");
 var runSequence = require('run-sequence');
 var del = require('del');
+var glob = require("glob");
 
 /**
  * Convert ratio3 images to ratio2
@@ -37,13 +38,15 @@ gulp.task('copy:html', function() {
 });
 
 // tfcsprite
-gulp.task('tfcsprite', function() {
-  var condition = !!(fs.existsSync(['public/sprites/*.json']));
-  return gulp.src('public/*.js')
-    .pipe(gulpif(condition, tfcsprite({
-      sprites: 'public/sprites'
-    })))
-    .pipe(gulp.dest('./build'));
+gulp.task('tfcsprite', function(done) {
+  glob("public/sprites/**/*.json", function (er, files) {
+    var condition = (files.length > 0);
+    gulp.src('public/*.js')
+      .pipe(gulpif(condition, tfcsprite()))
+      .pipe(gulp.dest('./build')).on('end', function() {
+        done();
+      });
+  });
 });
 
 // balmung for images folder

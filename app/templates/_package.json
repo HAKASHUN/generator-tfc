@@ -7,6 +7,7 @@
     "gulp-tfcsprite": "*",
     "gulp-balmung": "*",
     "run-sequence": "*",
-    "del": "*"
+    "del": "*",
+    "glob": "*"
   }
 }
