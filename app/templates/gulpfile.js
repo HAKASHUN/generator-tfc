@@ -66,6 +66,7 @@ gulp.task('balmung:sprites', function() {
 // clean build folder
 gulp.task('clean', function(done) {
   del([
-    'build/**'
+    'build/**',
+    '!build/images'
   ], done);
 });
