@@ -18,9 +18,9 @@ Ex. sampleというタイトルのアニメーション開発
 * `yo` - YEOMANというツール
 * `generator-tfc` - createjsの作業環境を生成するジェネレータ
 
-```
-$ npm install -g yo
-$ npm install -g git://github.com/HAKASHUN/generator-tfc.git
+```bash
+npm install -g yo
+npm install -g generator-tfc
 ```
 
 ### 1). 作業前のディレクトリ構成
