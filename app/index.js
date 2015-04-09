@@ -50,11 +50,11 @@ module.exports = yeoman.generators.Base.extend({
       this.mkdir('public/sprites');
 
       // create fla name
-      var flaNameArray = this.animationName.split('-');
+      var flaNameArray = this.animationName.split('_');
       var flaName = '';
       if (flaNameArray && flaNameArray[1]) {
         flaNameArray.shift();
-        flaName = flaNameArray.join('-');
+        flaName = flaNameArray.join('_');
       } else {
         flaName = flaNameArray[0];
       }
