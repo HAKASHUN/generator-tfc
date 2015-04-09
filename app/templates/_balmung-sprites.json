@@ -3,9 +3,9 @@
   "settings": {},
   "resize": {
     "ratio": [
-      2
+      1
     ],
-    "base": 2,
+    "base": 1,
     "unsharp": {
       "radius": 2,
       "sigma": 1.4,

@@ -48,9 +48,20 @@ module.exports = yeoman.generators.Base.extend({
       this.mkdir('public');
       this.mkdir('public/images');
       this.mkdir('public/sprites');
+
+      // create fla name
+      var flaNameArray = this.animationName.split('-');
+      var flaName = '';
+      if (flaNameArray && flaNameArray[1]) {
+        flaNameArray.shift();
+        flaName = flaNameArray.join('-');
+      } else {
+        flaName = flaNameArray[0];
+      }
+
       this.fs.copy(
         this.templatePath('_animation.fla'),
-        this.destinationPath('public/' + this.animationName + '.fla')
+        this.destinationPath('public/' + flaName + '.fla')
       );
 
       // conf
