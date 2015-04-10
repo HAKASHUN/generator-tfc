@@ -59,6 +59,11 @@ module.exports = yeoman.generators.Base.extend({
         flaName = flaNameArray[0];
       }
 
+      // Have Yeoman greet the user.
+      this.log(yosay(
+        chalk.red(flaName + '.fla is created!')
+      ));
+
       this.fs.copy(
         this.templatePath('_animation.fla'),
         this.destinationPath('public/' + flaName + '.fla')
